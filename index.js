@@ -101,30 +101,32 @@ bot.on('message', message => {
     
     ///////////////////////////////////////////////////////////////////
 
-bot.on('message', message => {
+client.on('message', message => {
+if (message.content.startsWith(prefix + "ping")) {
+var now = require('performance-now');
+var startTime = now();
+message.channel.send("pong = wait...")
+.then(message => {
+var endTime = now();
+return message.edit("**pong :ping_pong: = " + Math.round(endTime - startTime) + " ms.**");
+}).catch(console.error);
+}});
 
-  if (message.content.startsWith('/play')) {
-    let voiceChannel = message.guild.channels
-      .filter(function (channel) { return channel.type === 'voice' })
-      .first()
-    let args = message.content.split(' ')
-    voiceChannel
-      .join()
-      .then(function (connection) {
-        let stream = YoutubeStream(args[1])
-        stream.on('error', function () {
-          message.reply("Je n'ai pas réussi à lire cette vidéo :(")
-          connection.disconnect()
-        })
-        connection
-          .playStream(stream)
-          .on('end', function () {
-            connection.disconnect()
-          })
-      })
-  }
-
-})
+    bot.on('message', message => {
+    if (message.content.startsWith(prefix + "stats")) {
+    var help_embed = new Discord.RichEmbed()
+      .setColor('#00FEC3')
+      .addField("**Statistiques:**", "**/help : Affiche les commandes du bot .\n/info : Affiche des informations sur le bot .\n**"
+      message.channel.sendEmbed(help_embed)}});
+      var help_embed = new Discord.RichEmbed();
+var now = require('performance-now');
+var startTime = now();
+message.channel.send("Pong = Attendez...")
+.then(message => {
+var endTime = now();
+return message.edit("**Pong :ping_pong: = " + Math.round(endTime - startTime) + " ms.**");
+}).catch(console.error);
+    
 
 //////////////////////////////////////////////////////////////////
 
