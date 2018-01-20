@@ -101,14 +101,19 @@ bot.on('message', message => {
     
     ///////////////////////////////////////////////////////////////////
 
-bot.on('message', message => {
-if (message.content.startsWith(prefix + "ping")) {
+    bot.on('message', message => {
+      if (message.content.startsWith(prefix + "stats")) {
+      var help_embed = new Discord.RichEmbed()
+        .setColor('#00FEC3')
+        .addField("**Statistiques:**", "**Voici les statistiques**")
+        message.channel.sendEmbed(help_embed)}});
+        var help_embed = new Discord.RichEmbed();
 var now = require('performance-now');
 var startTime = now();
-message.channel.send("pong = wait...")
+message.channel.send("Pong = Attendez...")
 .then(message => {
 var endTime = now();
-return message.edit("**pong :ping_pong: = " + Math.round(endTime - startTime) + " ms.**");
+return message.edit("**Pong :ping_pong: = " + Math.round(endTime - startTime) + " ms.**");
 }).catch(console.error);
 }});
 
