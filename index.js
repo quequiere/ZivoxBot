@@ -112,20 +112,7 @@ return message.edit("**pong :ping_pong: = " + Math.round(endTime - startTime) + 
 }).catch(console.error);
 }});
 
-    bot.on('message', message => {
-    if (message.content.startsWith(prefix + "stats")) {
-    var help_embed = new Discord.RichEmbed()
-      .setColor('#00FEC3')
-      .addField("**Statistiques:**", "**/help : Affiche les commandes du bot .\n/info : Affiche des informations sur le bot .\n**"
-      message.channel.sendEmbed(help_embed)}});
-      var help_embed = new Discord.RichEmbed();
-var now = require('performance-now');
-var startTime = now();
-message.channel.send("Pong = Attendez...")
-.then(message => {
-var endTime = now();
-return message.edit("**Pong :ping_pong: = " + Math.round(endTime - startTime) + " ms.**");
-}).catch(console.error);
+
     
 
 //////////////////////////////////////////////////////////////////
