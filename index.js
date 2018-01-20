@@ -101,7 +101,7 @@ bot.on('message', message => {
     
     ///////////////////////////////////////////////////////////////////
 
-client.on('message', message => {
+bot.on('message', message => {
 if (message.content.startsWith(prefix + "ping")) {
 var now = require('performance-now');
 var startTime = now();
