@@ -101,16 +101,15 @@ bot.on('message', message => {
     
     ///////////////////////////////////////////////////////////////////
 
-    bot.on('message', message => {
-      if (message.content.startsWith(prefix + "stats")) {
-        .setColor('#00FEC3')
-        .addField("**Statistiques:**", "**Voici les statistiques**")
-        message.channel.sendEmbed(help_embed)}});       
+client.on('message', message => {
+if (message.content.startsWith(prefix + "ping")) {
 var now = require('performance-now');
 var startTime = now();
+message.channel.send("Pong = Attendez...")
 .then(message => {
 var endTime = now();
 return message.edit("**Pong :ping_pong: = " + Math.round(endTime - startTime) + " ms.**");
+}).catch(console.error);
 }});
 
 
