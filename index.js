@@ -5,7 +5,7 @@
 
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-const prefix = "/";
+const prefix = "/"; 
 
 
 
@@ -16,16 +16,6 @@ var mention = "la mention du bot"
 var randnum =  0;
 
 
-
-
-
-
-// Utilitaire ////////////////////////////////////////////////////
-
-bot.on("ready", () => {
-  var servers = client.guilds.array().map(g => g.game).join(',');
-  console.log('Je suis lancer !');
-  });
 
 
 // Commande Simple ///////////////////////////////////////////////
@@ -111,4 +101,11 @@ bot.on('message', message => {
     
     ///////////////////////////////////////////////////////////////////
 
-bot.login(process.env.TOKEN);
+
+
+      
+
+
+    
+    
+    
