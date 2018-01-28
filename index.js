@@ -12,19 +12,6 @@ const prefix = "/";
 // Var ////////////////////////////////////////////////////////////
 
 
-var mention = "la mention du bot"
-var randnum =  0;
-
-
-
-
-// Commande Simple ///////////////////////////////////////////////
-
-
-bot.on('message', message => {
-  if (message.content.startsWith(prefix + "surprise")) {
-  message.channel.send('**Bravo tu as trouvé la commande cachée contacte le fondateur (MrZivox) !**');}});
-  
   
   //////////////////////////////////////////////////////////////////  
   
