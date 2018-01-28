@@ -104,7 +104,7 @@ return message.edit("**Pong :ping_pong: = " + Math.round(endTime - startTime) + 
 
 bot.login(process.env.TOKEN);
 
-}
+
 
 
 
