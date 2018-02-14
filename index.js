@@ -13,10 +13,6 @@ const prefix = "/";
 
 ///////////////////////////////////////////////////////////////////
 
-bot.on("Ready", () => {
-  console.log("Je suis Lancer");
-  bot.user.setGame("Fait /help");
-});
 
 
   
@@ -28,11 +24,6 @@ bot.on("Ready", () => {
     }).catch(console.error)
   })
 
-  bot.on('guildMemberRemove', member => {
-    member.createDM().then(channel => {
-      return channel.send('Au revoir' + member.displayName +  'et à bientôt')
-    }).catch(console.error)
-  }) 
 
 //////Test///////////////////////////////////////////////////////////  
   
@@ -66,7 +57,7 @@ bot.on("Ready", () => {
     if (message.content.startsWith(prefix + "info")) {
     var info_embed = new Discord.RichEmbed()
       .setColor('#00FEC3')
-      .addField("Information Sur le Bot :" , "**Développeur : MrZivox\nVersion : 1.0**")
+      .addField("Information Sur le Bot :" , "**Développeur : MrZivox\nVersion : 1.1**")
       .addField("Actualités :", "**Aucune Actualités**")
       message.channel.sendEmbed(info_embed)}});
       var help_embed = new Discord.RichEmbed();
