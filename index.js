@@ -11,18 +11,30 @@ const prefix = "/";
 
 // Var ////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////
+
+bot.on('Je suis Lancer', () => {
+  bot.user.setPresence({ game: { name: 'Fait /help',type: 0} });
+
+  });
+
 
   
-///Welcome/////////////////////////////////////////////////////////////  
+//////Welcome/Bye///////////////////////////////////////////////  
   
   bot.on('guildMemberAdd', member => {
-  member.createDM().then(channel => {
-    return channel.send('Bienvenue sur mon serveur ' + member.displayName)
-  }).catch(console.error)
-})
+    member.createDM().then(channel => {
+      return channel.send('Bienvenue' + member.displayName +  'je suis ZivoxBot je suis le robot de se serveur')
+    }).catch(console.error)
+  })
 
-
-/////////////////////////////////////////////////////////////////////  
+  bot.on('guildMemberRemove', member => {
+    member.createDM().then(channel => {
+      return channel.send('Au revoir' + member.displayName +  'et à bientôt')
+    }).catch(console.error)
+  }) 
+  
+//////Test///////////////////////////////////////////////////////////  
   
   bot.on('message', message => {
   if (message.content.startsWith(prefix + "test")) {
@@ -36,7 +48,7 @@ const prefix = "/";
   
   bot.on('message', message => {
   if (message.content.startsWith(prefix + "bonjour")) {
-    message.channel.send('**Bonjour**' );}});
+    message.channel.send('**Bonjour**' +  member.displayName);}});
   
   
   //////////////////////////////////////////////////////////////////  
@@ -45,7 +57,7 @@ const prefix = "/";
   
   bot.on('message', message => {
   if (message.content.startsWith(prefix + "aurevoir")) {
-   message.channel.send('**Au revoir**');}});
+   message.channel.send('**Au revoir**' +  member.displayName);}});
   
   
   //info///////////////////////////////////////////////////////////
@@ -88,6 +100,8 @@ const prefix = "/";
     bot.on('message', message => {
     if (message.content.startsWith(prefix + "version")) {
     message.channel.send('**Version 1.0**');}});
+
+
     
     
     
@@ -104,6 +118,7 @@ var endTime = now();
 return message.edit("**Pong :ping_pong: = " + Math.round(endTime - startTime) + " ms.**");
 }).catch(console.error);
 }});
+
 
 
 //////////////////////////////////////////////////////////////////
