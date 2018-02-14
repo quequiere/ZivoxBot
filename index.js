@@ -82,6 +82,12 @@ const prefix = "/";
     bot.on('message', message => {
     if (message.content.startsWith(prefix + "version")) {
     message.channel.send('**Version 1.0**');}});
+
+bot.on('guildMemberAdd', member => {
+  member.createDM().then(channel => {
+    return channel.send('Bienvenue sur mon serveur ' + member.displayName
+  }).catch(console.error)
+})
     
     
     
