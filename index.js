@@ -13,10 +13,10 @@ const prefix = "/";
 
 ///////////////////////////////////////////////////////////////////
 
-bot.on('Je suis Lancer', () => {
-  bot.user.setPresence({ game: { name: 'Fait /help',type: 0} });
-
-  });
+bot.on("Ready", () => {
+  console.log("Je suis Lancer");
+  bot.user.setGame("Fait /help");
+});
 
 
   
@@ -33,7 +33,7 @@ bot.on('Je suis Lancer', () => {
       return channel.send('Au revoir' + member.displayName +  'et à bientôt')
     }).catch(console.error)
   }) 
-  
+
 //////Test///////////////////////////////////////////////////////////  
   
   bot.on('message', message => {
