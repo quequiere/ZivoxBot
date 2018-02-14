@@ -39,7 +39,7 @@ const prefix = "/";
   
   bot.on('message', message => {
   if (message.content.startsWith(prefix + "bonjour")) {
-    message.channel.send('**Bonjour**' +  member.displayName);}});
+    message.channel.send('**Bonjour**');}});
   
   
   //////////////////////////////////////////////////////////////////  
@@ -48,7 +48,7 @@ const prefix = "/";
   
   bot.on('message', message => {
   if (message.content.startsWith(prefix + "aurevoir")) {
-   message.channel.send('**Au revoir**' +  member.displayName);}});
+   message.channel.send('**Au revoir**');}});
   
   
   //info///////////////////////////////////////////////////////////
@@ -90,7 +90,7 @@ const prefix = "/";
     
     bot.on('message', message => {
     if (message.content.startsWith(prefix + "version")) {
-    message.channel.send('**Version 1.0**');}});
+    message.channel.send('**Version 1.1**');}});
 
 
     
