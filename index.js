@@ -19,7 +19,7 @@ const prefix = "/";
   
   bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
-      return channel.send('Bienvenue ' + member.displayName +  'je suis ZivoxBot je suis le robot de se serveur')
+      return channel.send('Bienvenue ' + member.displayName +  'je suis ZivoxBot je suis le robot de ce serveur')
     }).catch(console.error)
   })
 
